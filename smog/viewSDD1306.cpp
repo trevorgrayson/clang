@@ -21,7 +21,6 @@ void topRightText(char* buffer) {
 }
 
 void viewSetup() {
-  Serial.begin(115200);
   ssd1306_setFixedFont(ssd1306xled_font6x8);
   ssd1306_128x32_i2c_init();
   // Use this line for ESP32 with Composite video support
@@ -30,9 +29,8 @@ void viewSetup() {
   ssd1306_clearScreen();
   //ssd1306_createMenu( &menu, menuItems, sizeof(menuItems) / sizeof(char *) );
   //ssd1306_showMenu( &menu );
-  ssd1306_printFixed(30,  0, "booting...", STYLE_NORMAL);
+  //ssd1306_printFixed(30,  0, "booting...", STYLE_NORMAL);
   //ssd1306_printFixed(0, 16, "Bold text", STYLE_BOLD);
   //ssd1306_printFixed(0, 24, "Italic text", STYLE_ITALIC);
   //ssd1306_positiveMode();
-  Serial.println(F("OK"));
 }
